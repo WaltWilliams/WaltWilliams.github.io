@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:overflow="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+
+    <link href="./main.css" rel="stylesheet" type="text/css" />
+    <script src="./jquery-3.4.1.min.js"></script>
+
+    
+    <!-- ###################################################################################################################-->
+    <!-- ###################################################################################################################-->
+    <!-- This bit of code is where specific bit of banner and footer text are loaded, Including the browser title bar text. -->
+    <script>
+        $(document).ready(function () {
+            $.getScript("./loadStdItems.js") ;
+            $('#cr').html(new Date().getFullYear());
+            $('#imageLeft').hide(0).fadeIn(3000);
+            $('#imageRight').hide(0).fadeIn(3000);
+        })
+
+    </script>
+    <!-- ###################################################################################################################-->
+    <!-- ###################################################################################################################-->
+
+
+
+</head>
+<body class="bg">
+
+
+
+<!-- Fixed top header. Do not tamper with this or it's associated, dedicated, styles -->
+<div class="header_group">
+    <div class="ceiling">
+        <p class="ceiling"></p> 
+    </div>
+
+    <div class="banner">
+        <p class="banner" id="banner"></p>
+    </div>
+
+    <div class="lower_banner">
+        <p class="lower_banner" id="lower_banner"></p>
+    </div>
+</div>
+
+<!-- The line below is push the content container down -->
+<!-- Firefox ignores the "<br>" (line breaks) but uses the "div" cell -->
+<!-- Chrome ignores the "div" cell but uses the "<br>" (line breaks).-->
+<div class="containerTopSpacer"><br><br><br> <br><br><br> <br><br></div>
+
+
+<!-- Master content area -->
+<div class="content_area_container">
+    <!-- Menu bar area -->
+    <nav class="menu_bar">
+
+        <div id ="content"></div>
+
+        <!--
+        The menu is loaded through a simple AJAX load. See navigation.html to modify the
+        standard menu. Unique links can be added below or above the <nav> tag. If inserted
+        above the <nav> tag, be sure to add a <hr> (horizontal rule) tag just below
+        the inserted link to maintain the navigation bar formatting.
+        -->
+        <nav id="menuHere"></nav>
+
+        <br>
+        
+    </nav>
+
+    <!-- ###########################################################################################################-->
+    <!-- ###########################################################################################################-->
+    <!-- ###########################################################################################################-->
+    <!-- Add content in the space below -->
+    <!-- ###########################################################################################################-->
+    <!-- ###########################################################################################################-->
+    <!-- ###########################################################################################################-->
+    <div class="content_area">
+            <h2>About</h2>
+        <p>
+            I am a graduate of Southern Utah University (see link on left)
+            with his degree in Computer Science. My career goals include specializing in mobile applications, Internet application, and authoring microcontroller programs.
+        </p>
+
+       <p>
+            I enjoy classic cars, for which I owns three. A 1954 Chevrolet Belair 4 door, 1954 Chevrolet 3100 Deluxe Cab pickup,
+            and a 1983 Mercedes-Benz 380SL Roadster. I have discovered the fun of programming microcontrollers. Currently working with
+            the Microchip controllers.<br/><br/>
+
+            One of my hobbies is making stained glass windows. There is a certain satisfacting in deliberately breaking glass. The stained glass window on the left is
+            a reproduction &ndash; copy &ndash; of a windows for the <a href="https://boulderlodge14.org/" target="_blank">Boulder Colorado Freemasons</a> from their original 1894
+            lodge building that was located Pearl Street, now part of the Pearl Street walking district. The building burned to the ground in 1945,
+            with remnants of only 2 stained glass windows from that building still in their possession &mdash; though in very rough condition.
+            This windows is currently on display at Boulder Lodge #14 Masonic Lodge building in Boulder, Colorado.
+        </p>
+        <p>
+            The window on the right was inspired by architect Frank Lloyd Wright's design style called "Prairie School". This
+            particular window is styled after the windows that are in what is "The Ennis House"&mdash; one of his designs. The Ennis House has been featured in several
+            movies, most notably the "13th Floor" and interior shots of the
+            <a href="https://thecalorihouse.wordpress.com/2015/05/13/game-of-thrones-and-the-ennis-house/" target="_blank">Meereen Palace in the "Game Of Thrones".</a> .
+        </p>
+        <p>
+            
+        </p>
+
+        <img src="images/Masonic_window--400x533.jpg" name="Masonic Window" width="400" height="533" align="left" id="imageLeft">
+        <img src="images/Flw_window-3.jpg" name="Frank LLoyd Wright style window" width="400" height="533" align="right" id="imageRight">
+        <br/><br/>
+
+        
+    </div>
+</div>
+
+
+<!-- The line below is push the content container down -->
+<!-- Firefox ignores the "<br>" (line breaks) but uses the "div" cell -->
+<!-- Chrome ignores the "div" cell but uses the "<br>" (line breaks).-->
+<div class="containerBottomSpacer"><br><br><br> <br><br><br> <br><br></div>
+
+<!-- Start of footer -->
+<div class="footer_group">
+    <div class="footer_upper">
+        <p class="uFooter" id="uFooter"></p>
+    </div>
+    <div class="footer_lower">
+        <p class="lFooter" id="lFooter"></p>
+    </div>
+    <div class="copyright">
+        <p class="cr" id="cr"></p>
+    </div>
+</div>
+
+</body>
+</html>
