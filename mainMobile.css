@@ -141,7 +141,7 @@ p.lower_banner {
     border-width: 3px;
     border-color: aquamarine;
     float: left;
-    width: 50%;
+    width: 70%;
     margin-top: 100px;
     height: auto;
     margin: 0 auto;
@@ -155,7 +155,7 @@ p.lower_banner {
 }
 
 .menu_bar {
-    width: 20%;
+    width: 15%;
     float: left;
     backdrop-filter: blur(100px);
     background-color: rgba(255,250,250,0.8);
