@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    
+    <link href="./mainMobile.css" rel="stylesheet" type="text/css" />
+    <script src="./Jquery/jquery-3.4.1.min.js"></script>
+
+    
+    <!-- ###################################################################################################################-->
+    <!-- ###################################################################################################################-->
+    <!-- This bit of code is where specific bit of banner and footer text are loaded, Including the browser title bar text. -->
+    <script>
+        $(document).ready(function () {
+            $.getScript("./Jquery/loadStdItems.js") ;
+        });
+    </script>
+    <!-- ###################################################################################################################-->
+    <!-- ###################################################################################################################-->
+
+    
+    
+</head>
+<body class="bg">
+
+
+<!-- Fixed top header. Do not tamper with this or it's associated, dedicated, styles -->
+<div class="header_group">
+
+    <!-- Top black bar -->
+    <div class="ceiling">
+        <p class="ceiling"></p> 
+    </div>
+    
+    <!-- Band with my name -->
+    <div class="banner">
+        <p class="banner" id="banner"></p>
+    </div>
+    
+    <!-- Bar with "Programming Portfolio" --> 
+    <div class="lower_banner">
+        <p class="lower_banner" id="lower_banner"></p>
+    </div>
+</div>
+
+<!-- The line below is push the content container down -->
+<!-- Firefox ignores the "<br>" (line breaks) but uses the "div" cell -->
+<!-- Chrome ignores the "div" cell but uses the "<br>" (line breaks).-->
+<div class="containerTopSpacer"><br><br><br> <br><br><br> <br><br></div>
+
+
+<!-- Master content area -->
+<div class="content_area_container">
+    <!-- Menu bar area -->
+    <nav class="menu_bar">
+
+        <div id ="content"></div>
+
+        <!--
+        The menu is loaded through a simple AJAX load. See navigation.html to modify the
+        standard menu. Unique links can be added below or above the <nav> tag. If inserted
+        above the <nav> tag, be sure to add a <hr> (horizontal rule) tag just below
+        the inserted link to maintain the navigation bar formatting.
+        -->
+        <nav id="menuHere"></nav>
+        
+    </nav>
+
+    <!-- ###########################################################################################################-->
+    <!-- ###########################################################################################################-->
+    <!-- ###########################################################################################################-->
+    <!-- Add content in the space below -->
+    <!-- ###########################################################################################################-->
+    <!-- ###########################################################################################################-->
+    <!-- ###########################################################################################################-->
+    <div class="content_area">
+    <h2>Post College Projects</h2>
+                <p style="padding-left: 40px;">I have not ceased to study and work on projects.</p> 
+        <ul>
+            <li>
+                <b>MyClassicCar</b><br />
+                <b>An Android app</b> for classic car owner. Its primary feature is storing part numbers for difficult to locate parts. It also tracks oil changes, 
+                maintenance and repairs. It makes use of the RecyclerView, ListView, and several other Android elements. All persisted with the SQLite DBMS.  <br />
+                Available now on <a href="https://play.google.com/store/apps/details?id=com.woodlandcoders.myclassiccar" target="_blank" style="color:blue">Google Play</a>.<br />
+                <!--View the code at the <a href="https://github.com/WaltWilliams/MyClassicCar" target="_blank" style="color:blue">MyClassicCar GitHub repo</a>.<br />-->     <br /> 
+            </li>
+
+            <li>
+                <b>DigiCalc</b><br />
+                <b>An Android app</b> that calculates 64 bit binary, octal and hexadecimal values. The app makes use of Tabs, Fragments and alternate layouts for when 
+                the device is rotated as well as layouts for tablets. The idea for this app came while furthering my studies of computer architecture. <br />
+                Available now on <a href="https://play.google.com/store/apps/details?id=com.woodlandcoders.digicalc" target="_blank" style="color:blue">Google Play</a>.<br />
+                View the code at the <a href="https://github.com/WaltWilliams/DigiCalc" target="_blank" style="color:blue">DigiCalc GitHub repo</a>.<br /><br /> 
+            </li>
+        
+            <li>
+                <b>Kryptic</b><br />
+                <b>A Python 3 and TkInter</b> program that performs a One-Time-Pad encryption. The text to be encrypted and the "Pad" are both read in from files. 
+                The main part of the process is emulated with a singly circular linked list. Go to the GitHub repository (link below) for details on the One-Time-Pad encryption process.<br />
+                View the code at the <a href="https://github.com/WaltWilliams/Kryptic" target="_blank" style="color:blue">Kryptic Github repo</a>.<br /><br /> 
+            </li>
+        
+            <li>
+                <b>ShowTime</b><br />
+                <b>A Slideshow program</b> program writte in C++ featuring a <a href="https://www.qt.io/" target="_blank">Qt user interface</a>.This program
+                makes use of threads. Most notably Qt's version of them.<br />
+                View the code at the <a href="https://github.com/WaltWilliams/training" target="_blank" style="color:blue">Kryptic GitHub repo</a>.<br /><br /> 
+            </li>
+
+            <li>
+                <b>Programming Portfolio</b><br />
+                <b>This web site.</b> This is not a downloaded template. It was written with a text editor on my Debian Linux system and uses JQuery.<br />
+                <br /><br /> 
+            </li>
+            
+        </ul>
+       
+       
+ 
+      
+    <!-- ###########################################################################################################-->
+    <!-- ###########################################################################################################-->
+    <!-- ###########################################################################################################-->
+    <!-- End of content area. -->
+    <!-- ###########################################################################################################-->
+    <!-- ###########################################################################################################-->
+    <!-- ###########################################################################################################-->
+
+
+    </div>
+</div>
+
+
+<!-- The line below is push the content container down -->
+<!-- Firefox ignores the "<br>" (line breaks) but uses the "div" cell -->
+<!-- Chrome ignores the "div" cell but uses the "<br>" (line breaks).-->
+<div class="containerBottomSpacer"><br><br><br> <br><br><br> <br><br></div>
+
+
+<!-- Start of footer -->
+<div class="footer_group">
+    <div class="footer_upper">
+        <p class="uFooter" id="uFooter"></p>
+    </div>
+    <div class="footer_lower">
+        <p class="lFooter" id="lFooter"></p>
+    </div>
+    <div class="copyright">
+        <p class="cr" id="cr"></p>
+    </div>
+</div>
+
+
+</body>
+</html>
