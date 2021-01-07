@@ -155,7 +155,7 @@ p.lower_banner {
 }
 
 .menu_bar {
-    width: 13%;
+    width: 20%;
     float: left;
     backdrop-filter: blur(100px);
     background-color: rgba(255,250,250,0.8);
