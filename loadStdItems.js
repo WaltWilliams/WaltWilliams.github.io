@@ -1,7 +1,7 @@
 $(document).attr("title", "Walt Williams|Portfolio");
-$('#banner').load("./stdText/banner.txt").hide().delay(1500).fadeIn(1500);
-$('#lower_banner').load("./stdText/lower_banner.txt").hide().delay(3500).fadeIn(1000);
-$('#uFooter').load("./stdText/uFooter.txt").hide().delay(6000).fadeIn(1000);
-$('#lFooter').load('./stdText/lFooter.txt')
+$('#banner').load("./banner.txt").hide().delay(1500).fadeIn(1500);
+$('#lower_banner').load("./lower_banner.txt").hide().delay(3500).fadeIn(1000);
+$('#uFooter').load("./uFooter.txt").hide().delay(6000).fadeIn(1000);
+$('#lFooter').load('./lFooter.txt')
 $('#menuHere').load("./navigation.html")
 $('#cr').text('\u00A9  ' +  new Date().getFullYear() + ", Walt L. Williams " + ' \u2014 ' + " Longmont, Colorado");
