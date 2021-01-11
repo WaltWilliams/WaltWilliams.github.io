@@ -21,7 +21,7 @@ body {
 }
 
 .bg {
-    background-image: url("./Sunrise_on_the_rockies--Ed_Schreiner--12-24-2016.jpg");
+    background-image: url("./images/Sunrise_on_the_rockies--Ed_Schreiner--12-24-2016.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -41,6 +41,7 @@ hr {
 img {
     display: block;
     margin: 0 auto;
+    filter: drop-shadow(5px 5px 5px black);
 }
 
 h2 {
@@ -98,7 +99,7 @@ p.ceiling {
 }
 
 .banner {
-    background-image: url("./black_binary_background.gif");  
+    background-image: url("./images/black_binary_background.gif");  
     height: 50px;
     width: 100%;
     position: relative;
