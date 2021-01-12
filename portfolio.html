@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    
+    <link href="./main.css" rel="stylesheet" type="text/css" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    
+    <!-- ###################################################################################################################-->
+    <!-- ###################################################################################################################-->
+    <!-- This bit of code is where specific bit of banner and footer text are loaded, Including the browser title bar text. -->
+    <script>
+        $(document).ready(function () {
+            $.getScript("./Jquery/loadStdItems.js") ;
+        });
+    </script>
+    <!-- ###################################################################################################################-->
+    <!-- ###################################################################################################################-->
+
+    
+    
+</head>
+<body class="bg">
+
+
+<!-- Fixed top header. Do not tamper with this or it's associated, dedicated, styles -->
+<div class="header_group">
+
+    <!-- Top black bar -->
+    <div class="ceiling">
+        <p class="ceiling"></p>
+    </div>
+
+    <!-- Band with my name -->
+    <div class="banner">
+        <p class="banner" id="banner"></p>
+    </div>
+    
+    <!-- Bar with "Programming Portfolio" --> 
+    <div class="lower_banner">
+        <p class="lower_banner" id="lower_banner"></p>
+    </div>
+</div>
+
+<!-- Master content area -->
+<div class="content_area_container">
+    <!-- Menu bar area -->
+
+    <!--
+
+<nav class="menu_bar">
+
+    <div id ="content"></div>
+
+
+   loaded through a simple AJAX load. See navigation.html to modify the
+    standard menu. Unique links can be added below or above the <nav> tag. If inserted
+    above the <nav> tag, be sure to add a <hr> (horizontal rule) tag just below
+    the inserted link to maintain the navigation bar formatting.
+        <nav id="menuHere"></nav>
+
+    </nav>
+    -->
+
+    <!-- ###########################################################################################################-->
+    <!-- ###########################################################################################################-->
+    <!-- ###########################################################################################################-->
+    <!-- Add content in the space below -->
+    <!-- ###########################################################################################################-->
+    <!-- ###########################################################################################################-->
+    <!-- ###########################################################################################################-->
+    <div class="content_area">
+    <h1 style="padding-left: 40px";>My Projects</h1>
+                <p>Ease is a greater threat to progress than hardship.<a href="https://github.com/WaltWilliams?tab=repositories" target="_blank" style="float:right">GitHub</a></p>
+        <ul>
+            <li>
+                <b>Programming Portfolio</b><br />
+                <b>This web site.</b> This is not a downloaded template. It was written with a text editor and uses JQuery.
+                Changing the text on the top and bottom banners only requires altering one file. JQuery is responsible for the
+                fade in text. The code is also in place but currently not visible for a floating left navigation bar and
+                only requires altering one file.
+            </li>
+            <hr>
+            <br />
+            <li>
+                <b>MyClassicCar</b><br />
+                <a href="./images/mcc3.jpg"><img src="./images/mcc3.jpg" class="photo0"></a><b>An Android app</b> for classic car owner. Its star feature is storing part numbers for difficult to locate parts. I have found with my oun
+                classic car that sometimes Parts Stores won't have a listing for a part I'm looking for. However, they were able to look up the part from a part
+                number that I provided them. This application also tracks oil changes, maintenance and repairs.
+                <br /><br />
+                The opening view uses Android's ListView for a list of cars. Most people typically don't have more than two or three cars, so using a ListView element here works fine. The lists for
+                parts, maintenance, and oil changes makes use of the RecyclerView, as there could be, over time, hundreds of listings. RecyclerView "recycles"
+                a list "cell" once it is no longer is visable on the screen. This saves on device memory usage and keeps the app responsive. The RecyclerView's onClickListener is implemented with an Interface; which is the community
+                excepted "Best Way Practice" of implementation.
+                <br /><br />
+                Other Android elements include dropdown menu on the toolbar, proper Back Navigation, Spinners, Buttons, and several others.
+                Data is persisted with the SQLite relational database management system. SQLite was selected as it is the standard DBMS on all android devices and is
+                very likely used by several other apps. <br />
+                Available now on <a href="https://play.google.com/store/apps/details?id=com.woodlandcoders.myclassiccar" target="_blank" style="color:blue">Google Play</a>.<br />
+                <!--View the code at the <a href="https://github.com/WaltWilliams/MyClassicCar" target="_blank" style="color:blue">MyClassicCar GitHub repo</a>.<br />-->
+            </li>
+            <hr>
+            <br />
+            <li>
+                <b>DigiCalc</b><br />
+                <a href="./images/digicalc.jpg" ><img src="./images/digicalc.jpg" class="photo0"></a><b>An Android app</b> that calculates 64 bit binary, octal and hexadecimal values. The idea for this app came while furthering my studies of computer architecture.
+                <br /><br />
+                This app makes zero use of Java's BigInteger or BigDecimal classes.
+                <br /><br />
+                The foundation of this app are the properly working addition methods for binary, octal and
+                hexadecimal calculations. Equally as important are the methods for the 2s-complement converters for each base type. Subtraction is performed first by tapping the desired base
+                value (anywhere in the text field) and then tapping minus sign on the keypad. This places a minus sign at the beginning of that base value. Tapping the minus key again removes it.
+                If there is a minus sign at the beginning of one or both values, a 2s-compliment addition is performed.
+                Multiplication and division are merely extensions of addition and subtraction.
+                <br /><br />
+                The Android elements used in this app are tabs with Fragments. Fragments are used to insert the custom keypads onto each base type tabs to enter values &mdash; the device soft keyboard has been disabled.
+                Communication between the Fragment keypads and fields in the containing in the parent layout is performed by the ViewModel class. This implementation is much simpler
+                than an implementation involving an Interface.
+                There are alternate layouts for when the device is rotated; using the exact same keypad layouts. There is also layouts for tablets, again using the same keypad layouts.<br />
+                Available now on <a href="https://play.google.com/store/apps/details?id=com.woodlandcoders.digicalc" target="_blank" style="color:blue">Google Play</a>.<br />
+                View the code at the <a href="https://github.com/WaltWilliams/DigiCalc" target="_blank" style="color:blue">DigiCalc GitHub repo</a>.
+            </li>
+            <hr>
+            <br />
+            <li>
+                <b>Kryptic</b><br />
+                <a href="./images/kryptic.png" ><img src="./images/kryptic.png" class="photo1"></a><b>A Python 3 and TkInter</b> program that performs the asynchronous One-Time-Pad encryption. The text to be encrypted and the "Pad" are both read in from files.
+                The main part of the process is emulated with a singly circular linked list emulating an encryption wheel.
+                <br /><br />
+                One-Time-Pad encryption is mathematically proven to be unbreakable
+                <br /><br />
+                <b>The Process</b><br />
+                To perform an encryption take the first letter in the message and the first letter on the One-Time-Pad. Determine their numerical position in the alphabet and add those two numbers together. 
+                Where 0 = A and 25 = Z, start counting at the beginning of the alphabet; if your added up value exceeds 25 start back at the beginning of the alphabet and continue counting where you left off &mdash; like going in a circle. 
+                A short cut for values over 25 is to subtract 26 from them. For example: let Z = 25 and Y = 24. 25 + 24 = 49. 49 - 26 = 23. The 23<sup>rd</sup> position in the alphabet is X. Decryption is similar except it involves modular arithmetic.
+                <br /><br />
+                Once a letter on the One-Time-Pad is used it is never used again. Just cross off that letter and keep going. Once a One-Time-Pad is used it is never used again.
+                <br /><br />
+                During the encryption process all non-letter characters are removed and numbers are converted to their spelled out form. As a result the final decrypted message will be devoid of non-letter characters including spaces.
+                For details on making a One-Time-Pad for use with this program see the Github repo.
+                <br />
+                View the code at the <a href="https://github.com/WaltWilliams/Kryptic" target="_blank" style="color:blue">Kryptic Github repo</a>.
+            </li>
+            <hr>
+            <br />
+            <li>
+                <b>ShowTime</b><br />
+                <a href="./images/showtime.png" ><img src="./images/showtime.png" class="photo2"></a><b>A Slideshow program</b> program written in C++ with a <a href="https://www.qt.io/" target="_blank">Qt user interface</a>. This is my
+                first time using Qt taking approximately 2 weeks to write.
+                <br /><br />
+                The heart of the program is the QThread in combination with a signal-and-slot. The thread contains an object with a signal-and-slot that receives a QStringList of filenames. The internal signal-and-slot
+                starts automatically upon instantiation of the class and extracts a single filename from the passed in QStringList and emits it back to the parent thread and then 'pauses' for 5
+                seconds &mdash; QThread::msleep(x).
+                <br /><br />
+                The signal-and-slot in the parent thread upon detecting a new filename calls the predefined 'slot' (function) which reads the photo file and inserts the image into the QLabel, which is the Qt element that
+                displays photos.
+                <br /><br />
+                Three additional variables are passed into the object (by reference) contained within the thread. One is to adjust the delay time which is currently
+                hard coded in the parent thread. One passes in a value to create a pause when the pause button is clicked as Qthreads do not have a "pause".
+                The remaining variable passes one of four states when the "Start", "Stop" or "Select Folder" buttons are clicked or the program is terminated: <br />
+                <ul>
+                    <li>0 (zero) is set when the "Start" button is clicked and the thread with an object containing a signal-and-slot is created.</li>
+                    <li>1 is set. This terminates the thread when the application exiting. Cleanly exits the program.</li>
+                    <li>2 is set when the "Stop" button is clicked. This a modified 'pause' and results in the resetting the QStringList back to the beginning.</li>
+                    <li>3 is set when the "Select Folder" button is clicked. This is also a modified 'pause' except it clears the QStringList and then
+                        reloads it with a new list of filtered filenames gathered from the newly selected folder.</li>
+                </ul>
+                View the code at the <a href="https://github.com/WaltWilliams/ShowTime" target="_blank" style="color:blue">ShowTime GitHub repo</a>.<br /><br />
+            </li>
+        </ul>
+
+      
+    <!-- ###########################################################################################################-->
+    <!-- ###########################################################################################################-->
+    <!-- ###########################################################################################################-->
+    <!-- End of content area. -->
+    <!-- ###########################################################################################################-->
+    <!-- ###########################################################################################################-->
+    <!-- ###########################################################################################################-->
+    
+    
+    </div> 
+</div>
+
+
+<!-- Start of footer -->
+<div class="footer_group">
+    <div class="footer_upper">
+        <p class="uFooter" id="uFooter"></p>
+    </div>
+    <div class="footer_lower">
+        <p class="lFooter" id="lFooter"></p>
+    </div>
+    <div class="copyright">
+        <p class="cr" id="cr"></p>
+    </div>
+</div>
+
+
+</body>
+</html>
