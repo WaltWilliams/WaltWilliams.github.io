@@ -110,21 +110,20 @@
                 This app does not use Java's BigInteger or BigDecimal classes.
                 <br /><br />
                 The foundation of this app are the properly working addition methods for binary, octal and
-                hexadecimal calculations. Equally as important are the methods for the 2s-complement and related converters for each base type. Subtraction is performed first by tapping the desired base
+                hexadecimal calculations. Equally as important are the methods for the 2s, 8s, and 16s complement converters for each base type. Subtraction is performed first by tapping the desired base
                 value (anywhere in the text field) and then tapping minus sign on the keypad. This places a minus sign at the beginning of that base value. Tapping the minus key again removes it.
-                If there is a minus sign at the beginning of one of the values, a 2s-compliment addition is performed. Multiplication and division are merely extensions of addition and subtraction.
+                If there is a minus sign at the beginning of one of the values, a base-compliment addition is performed. Multiplication and division are merely extensions of addition and subtraction.
                 <br /><br />
-                A recent feature enhancement saw the inclusion of a "Caps" CheckBox. This feature grants the choice of either upper of lower case "alpha" digits &mdash; 'A' or 'a' &mdash; for hexadecimal numbers. Your choice of case 
-                is persisted in a single object JSON file saved in the apps internal memory. (The file is only 14 bits in size.) 
+                A recent feature enhancement saw the inclusion of a "Caps" CheckBox. This feature grants the choice of either upper of lower case "alpha" digits &mdash; 'A' or 'a' &mdash; for hexadecimal numbers. Your choice of case is persisted in a single object JSON file saved in the apps internal memory. (The file is only 14 bits in size.) 
                 <br /><br />
-                The Android elements used in this app are tabs with Fragments. Fragments are used to insert the custom keypads onto each base type tabs to enter values &mdash; the device's soft keyboard has been disabled.
+                The Android elements used in this app are tabs with Fragments. Fragments are used to insert the custom keypads onto each of the base type tabs to enter values &mdash; the device's soft keyboard has been disabled.
                 Communication between the Fragment keypads and fields in the parent layout is performed using the ViewModel class. This implementation is much simpler
                 than an implementation involving an Interface.
                 <br /><br />
                 The event-driven nature of the ViewModel class has made the functionality of the arrow, delete, and minus sign keys, on the keypads, possible. Each time a key is tapped it causes an event. That event calls the
-                callback method &mdash; ViewModelProvider(). From the callback a method called etBehavior() is called &mdash; "et" standing for EditText. The etBehavior method was originally written to only handle the logic for the 
-                minus sign in that the minus sign is <i>always</i> inserted on the far left end of the field. Writing a sub-class of the EditText for just one bit logic was deemed unnecessary. Since then, logic for the arrow
-                and delete keys was added, as well as small blocks for permitting an increase to the number of characters in a field if the minus was first tapped, as well as logic to prevent any digits from being added to the left 
+                callback method ViewModelProvider(). From the callback a method called etBehavior() is called &mdash; "et" standing for EditText. The etBehavior method was originally written to only handle the logic for the 
+                minus sign in that the minus sign is <i>always</i> inserted on the far left end of the field. Subclassing of the EditText for just one bit logic was deemed unnecessary. Since then, logic for the arrow
+                and delete keys was added, as well as small blocks for permitting an increase to the permitted number of characters in a field if the minus sign was inserted, and logic to prevent any digits from being added to the left 
                 side of the minus sign. A child-class will now be written to properly gather this logic in one place. 
                 <br /><br />
                 There are alternate layouts for when the device is rotated. There is also a layout for tablets.<br />
@@ -163,14 +162,13 @@
                 starts automatically upon instantiation and extracts a single filename from the passed in QStringList and emits it back to the parent thread and then 'pauses' for 5
                 seconds &mdash; QThread::msleep(x).
                 <br /><br />
-                The signal-and-slot in the parent thread upon detecting a new filename calls the predefined 'slot' (function) which reads the photo file and inserts the image into the QLabel, which is the Qt element that
-                displays photos.
+                The signal-and-slot in the parent thread upon detecting a new filename causes an event and the predefined 'slot' (function) reads the photo file and inserts the image into the QLabel, which is the Qt element that displays photos.
                 <br /><br />
                 Three additional variables are passed into the object (by reference) contained within the thread object. One variable is to adjust the delay time which is currently
                 hard coded in the parent thread. One variable passes in a value to create a pause when the pause button is clicked as Qthreads do not have a "pause".
-                The remaining variable passes one of four states when the "Start", "Stop" or "Select Folder" buttons are clicked or the program is terminated: <br />
+                The remaining variable holds one of four states when the "Start", "Stop" or "Select Folder" buttons are clicked or the program is terminated: <br />
                 <ul>
-                    <li>0 (zero) is set when the "Start" button is clicked and the thread with an object containing a signal-and-slot is created.</li>
+                    <li>0 (zero) is set when the "Start" button is clicked and the thread with an object containing a signal-and-slot is instantiated.</li>
                     <li>1 is set. This terminates the thread when the application exiting. Cleanly exiting the program.</li>
                     <li>2 is set when the "Stop" button is clicked. This a modified 'pause' and results in the resetting the QStringList back to the beginning.</li>
                     <li>3 is set when the "Select Folder" button is clicked. This is also a modified 'pause' except it clears the QStringList and then
