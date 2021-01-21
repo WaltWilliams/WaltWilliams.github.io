@@ -86,8 +86,8 @@
             <br />
             <li>
                 <b>MyClassicCar</b><br />
-                <a href="./images/mcc3.jpg"><img src="./images/mcc3.jpg" class="photo0"></a><b>An Android app</b> for classic car owner. Its star feature is storing part numbers for difficult to locate parts. I have found with my oun
-                classic car that sometimes Parts Stores won't have a listing for a part I'm looking for. However, they were able to look up the part from a part
+                <a href="./images/mcc3.jpg"><img src="./images/mcc3.jpg" class="photo0"></a><b>An Android app</b> for classic car owner. Its star feature is storing part numbers for difficult to locate parts. I have found with my own
+                classic car that sometimes Parts Stores will not have a listing for a part I'm looking for. However, they are able to look up the part from a part
                 number that I provided them. This application also tracks oil changes, maintenance and repairs.
                 <br /><br />
                 The opening view uses Android's ListView for a list of cars. Most people typically don't have more than two or three cars, so using a ListView element here works fine. The lists for
@@ -105,29 +105,29 @@
             <br />
             <li>
                 <b>DigiCalc</b><br />
-                <a href="./images/hexVSS.jpg" ><img src="./images/hexVSS.jpg" class="photo0"></a><b>An Android app</b> that calculates 64 bit binary, octal and hexadecimal values. The idea for this app came while furthering my studies of computer architecture.
+                <a href="./images/digicalc.jpg" ><img src="./images/hexVSS.jpg" class="photo0"></a><b>An Android app</b> that calculates 64 bit binary, octal and hexadecimal values. The idea for this app came while furthering my studies of computer architecture.
                 <br /><br />
-                This app makes zero use of Java's BigInteger or BigDecimal classes.
+                This app does not use Java's BigInteger or BigDecimal classes.
                 <br /><br />
                 The foundation of this app are the properly working addition methods for binary, octal and
-                hexadecimal calculations. Equally as important are the methods for the 2s-complement converters for each base type. Subtraction is performed first by tapping the desired base
+                hexadecimal calculations. Equally as important are the methods for the 2s-complement and related converters for each base type. Subtraction is performed first by tapping the desired base
                 value (anywhere in the text field) and then tapping minus sign on the keypad. This places a minus sign at the beginning of that base value. Tapping the minus key again removes it.
                 If there is a minus sign at the beginning of one of the values, a 2s-compliment addition is performed. Multiplication and division are merely extensions of addition and subtraction.
                 <br /><br />
-                A recent feature enhancement saw the inclusion of a "Caps" CheckBox. This feature grants the choice of either upper of lower case "alpha" digits &mdash; 'A' or 'a'. Your choice of case 
+                A recent feature enhancement saw the inclusion of a "Caps" CheckBox. This feature grants the choice of either upper of lower case "alpha" digits &mdash; 'A' or 'a' &mdash; for hexadecimal numbers. Your choice of case 
                 is persisted in a single object JSON file saved in the apps internal memory. (The file is only 14 bits in size.) 
                 <br /><br />
                 The Android elements used in this app are tabs with Fragments. Fragments are used to insert the custom keypads onto each base type tabs to enter values &mdash; the device soft keyboard has been disabled.
-                Communication between the Fragment keypads and fields in the containing in the parent layout is performed by the ViewModel class. This implementation is much simpler
+                Communication between the Fragment keypads and fields in the parent layout is performed using the ViewModel class. This implementation is much simpler
                 than an implementation involving an Interface.
                 <br /><br />
-                The event-driven nature of the ViewModel class has made the functionality of the arrow, delete, and minus sign keys, on the keypads, possible. Each time a key is tapped it causes an event. That event calls a
+                The event-driven nature of the ViewModel class has made the functionality of the arrow, delete, and minus sign keys, on the keypads, possible. Each time a key is tapped it causes an event. That event calls the
                 callback method &mdash; ViewModelProvider(). From the callback a method called etBehavior() is called &mdash; "et" standing for EditText. The etBehavior method was originally written to only handle the logic for the 
-                minus sign in that the minus sign is <i>always</i> inserted on the far left end of the field. Writing a sub-class of the EditText for just one bit logic was deemed unnecessary. Since then logic for the arrow
-                and delete keys was added, as well as small blocks for permitting an increase to the number of characters in a field if the minus has been tapped, as well as to prevent any digits from being added to the left 
+                minus sign in that the minus sign is <i>always</i> inserted on the far left end of the field. Writing a sub-class of the EditText for just one bit logic was deemed unnecessary. Since then, logic for the arrow
+                and delete keys was added, as well as small blocks for permitting an increase to the number of characters in a field if the minus was first tapped, as well as logic to prevent any digits from being added to the left 
                 side of the minus sign. A child-class will now be written to properly gather this logic in one place. 
                 <br /><br />
-                There are alternate layouts for when the device is rotated; using the exact same keypad layouts. There is also layouts for tablets, again using the same keypad layouts.<br />
+                There are alternate layouts for when the device is rotated. There is also a layout for tablets.<br />
                 Available now on <a href="https://play.google.com/store/apps/details?id=com.woodlandcoders.digicalc" target="_blank" style="color:blue">Google Play</a>.<br />
                 View the code at the <a href="https://github.com/WaltWilliams/DigiCalc" target="_blank" style="color:blue">DigiCalc GitHub repo</a>.
             </li>
@@ -135,14 +135,14 @@
             <br />
             <li>
                 <b>Kryptic</b><br />
-                <a href="./images/kryptic.png" ><img src="./images/kryptic.png" class="photo1"></a><b>A Python 3 and TkInter</b> program that performs the asynchronous One-Time-Pad encryption. The text to be encrypted and the "Pad" are both read in from files.
+                <a href="./images/kryptic.png" ><img src="./images/kryptic.png" class="photo1"></a><b>A Python 3 and TkInter</b> program that performs the synchronous One-Time-Pad encryption. The text to be encrypted and the "Pad" are both read in from files.
                 The main part of the process is emulated with a singly circular linked list emulating an encryption wheel.
                 <br /><br />
                 One-Time-Pad encryption is mathematically proven to be unbreakable
                 <br /><br />
                 <b>The Process</b><br />
-                To perform an encryption take the first letter in the message and the first letter on the One-Time-Pad. Determine their numerical position in the alphabet and add those two numbers together. 
-                Where 0 = A and 25 = Z, start counting at the beginning of the alphabet; if your added up value exceeds 25 start back at the beginning of the alphabet and continue counting where you left off &mdash; like going in a circle. 
+                To perform an encryption take the first letter in the message and the first letter on the One-Time-Pad. Determine their numerical position in the alphabet and add those two numbers together, 
+                where A = 0 and Z = 25. After adding, start counting at the beginning of the alphabet; if your added up value exceeds 25 start back at the beginning of the alphabet and continue counting where you left off &mdash; like going in a circle. 
                 A short cut for values over 25 is to subtract 26 from them. For example: let Z = 25 and Y = 24. 25 + 24 = 49. 49 - 26 = 23. The 23<sup>rd</sup> position in the alphabet is X. Decryption is similar except it involves modular arithmetic.
                 <br /><br />
                 Once a letter on the One-Time-Pad is used it is never used again. Just cross off that letter and keep going. Once a One-Time-Pad is used it is never used again.
@@ -157,21 +157,21 @@
             <li>
                 <b>ShowTime</b><br />
                 <a href="./images/showtime.png" ><img src="./images/showtime.png" class="photo2"></a><b>A Slideshow program</b> program written in C++ with a <a href="https://www.qt.io/" target="_blank">Qt user interface</a>. This is my
-                first time using Qt taking approximately 2 weeks to write.
+                first time using Qt.
                 <br /><br />
                 The heart of the program is the QThread in combination with a signal-and-slot. The thread contains an object with a signal-and-slot that receives a QStringList of filenames. The internal signal-and-slot
-                starts automatically upon instantiation of the class and extracts a single filename from the passed in QStringList and emits it back to the parent thread and then 'pauses' for 5
+                starts automatically upon instantiation and extracts a single filename from the passed in QStringList and emits it back to the parent thread and then 'pauses' for 5
                 seconds &mdash; QThread::msleep(x).
                 <br /><br />
                 The signal-and-slot in the parent thread upon detecting a new filename calls the predefined 'slot' (function) which reads the photo file and inserts the image into the QLabel, which is the Qt element that
                 displays photos.
                 <br /><br />
-                Three additional variables are passed into the object (by reference) contained within the thread. One is to adjust the delay time which is currently
-                hard coded in the parent thread. One passes in a value to create a pause when the pause button is clicked as Qthreads do not have a "pause".
+                Three additional variables are passed into the object (by reference) contained within the thread object. One variable is to adjust the delay time which is currently
+                hard coded in the parent thread. One variable passes in a value to create a pause when the pause button is clicked as Qthreads do not have a "pause".
                 The remaining variable passes one of four states when the "Start", "Stop" or "Select Folder" buttons are clicked or the program is terminated: <br />
                 <ul>
                     <li>0 (zero) is set when the "Start" button is clicked and the thread with an object containing a signal-and-slot is created.</li>
-                    <li>1 is set. This terminates the thread when the application exiting. Cleanly exits the program.</li>
+                    <li>1 is set. This terminates the thread when the application exiting. Cleanly exiting the program.</li>
                     <li>2 is set when the "Stop" button is clicked. This a modified 'pause' and results in the resetting the QStringList back to the beginning.</li>
                     <li>3 is set when the "Select Folder" button is clicked. This is also a modified 'pause' except it clears the QStringList and then
                         reloads it with a new list of filtered filenames gathered from the newly selected folder.</li>
@@ -179,7 +179,9 @@
                 View the code at the <a href="https://github.com/WaltWilliams/ShowTime" target="_blank" style="color:blue">ShowTime GitHub repo</a>.<br /><br />
             </li>
         </ul>
-
+        <br>
+        <a href="https://waltwilliams.github.io/">Resume</a>
+      
     <!-- ###########################################################################################################-->
     <!-- ###########################################################################################################-->
     <!-- ###########################################################################################################-->
@@ -187,6 +189,7 @@
     <!-- ###########################################################################################################-->
     <!-- ###########################################################################################################-->
     <!-- ###########################################################################################################-->
+    
     
     </div> 
 </div>
